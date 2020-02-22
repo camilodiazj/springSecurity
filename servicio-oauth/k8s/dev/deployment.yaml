@@ -1,0 +1,25 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: oauth-server
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: oauth-server
+    spec:
+      containers:
+        - name: wsrestlogin
+          image: oauth-service:v1
+          resources:
+            limits:
+              memory: "500Mi"
+              cpu: "200m"
+          imagePullPolicy: Always
+          ports:
+          - containerPort: 9100
+          envFrom:
+          - configMapRef:
+              name: oauth-service 
+      restartPolicy: Always

@@ -1,0 +1,247 @@
+{
+	"info": {
+		"_postman_id": "ee1ece79-d945-4330-8df2-7f32571e4ae1",
+		"name": "OAUTH",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ouath",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "contrasena",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "nombre_de_la_app",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "camilo",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/oauth/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"oauth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/oauth/token",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "contrasena",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "nombre_de_la_app",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "camilo",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/oauth/token?",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"oauth",
+						"token"
+					],
+					"query": [
+						{
+							"key": "Username",
+							"value": "user",
+							"disabled": true
+						},
+						{
+							"key": "Password",
+							"value": "f4f2ffe0-ee9e-45a7-b71b-a9d0914e1ea3",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9090/rutas",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbmZvX2FkaWNpb25hbCI6IkhvbGEgcXVlIHRhbCFjYW1pbG8iLCJ1c2VyX25hbWUiOiJjYW1pbG8iLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiYXBlbGxpZG8iOiJkaWF6IiwiZXhwIjoxNTc4Njg5NzczLCJub21icmUiOiJjYW1pbG8iLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwianRpIjoiODBlMGM3MTItZjM3Ni00ODI1LTg4NGEtOTI2YTQzNTcwZmE5IiwiZW1haWwiOiJjYW1pbG8uZGlhekBnbWFpbC5jb20iLCJjbGllbnRfaWQiOiJub21icmVfZGVfbGFfYXBwIn0.n3FclvmfDiaOttv9x3e9eQ3g08BTPpb03i85G6lft0I",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"codTroncal\": \"B\",\r\n        \"nombre\": \"Norte !!!\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/rutas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"rutas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8085/users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbmZvX2FkaWNpb25hbCI6IkhvbGEgcXVlIHRhbCFjYW1pbG8iLCJ1c2VyX25hbWUiOiJjYW1pbG8iLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiYXBlbGxpZG8iOiJkaWF6IiwiZXhwIjoxNTc4NjkxNzk3LCJub21icmUiOiJjYW1pbG8iLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwianRpIjoiMjEwNzE4ODMtMDRhZC00ZjMzLWE1YjEtOTMwOTRlMjZjMGFiIiwiZW1haWwiOiJjYW1pbG8uZGlhekBnbWFpbC5jb20iLCJjbGllbnRfaWQiOiJub21icmVfZGVfbGFfYXBwIn0.IKNUpqgP7rC8ANa3-GziV9OZEF1OWo-NPPUJCFU5_nM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": 5,\r\n        \"username\": \"admin2\",\r\n        \"password\": \"$2a$10$MUzNBRh5Ywl/bRnPAKfEIOjBPp4Tl0Xu1qccVE9sV7J1liLQQaXmG\",\r\n        \"enabled\": true,\r\n        \"nombre\": \"andres2\",\r\n        \"apellido\": \"jaimes2\",\r\n        \"email\": \"andres2.jaimes2@gmail.com\",\r\n        \"roles\": [  {\r\n                \"id\": 1,\r\n                \"nombre\": \"ROLE_USER\"\r\n            },\r\n            {\r\n                \"id\": 2,\r\n                \"nombre\": \"ROLE_ADMIN\"\r\n            }\r\n        \t]\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

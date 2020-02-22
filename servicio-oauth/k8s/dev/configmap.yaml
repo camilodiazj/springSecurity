@@ -1,0 +1,13 @@
+apiVersion: v1
+data:
+  application.properties: |
+    spring.application.name=servicio-oauth
+    server.port=9100
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2020-01-14T19:22:56Z"
+  name: oauth-service
+  namespace: default
+  resourceVersion: "62667"
+  selfLink: /api/v1/namespaces/default/configmaps/oauth-service
+  uid: 449e9bef-3703-11ea-afdc-00155d579305

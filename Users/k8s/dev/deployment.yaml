@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: users-server
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: users-server
+    spec:
+      containers:
+        - name: users-server
+          image: users-service:v1
+          ports:
+            - containerPort: 8085
+        - configMapRef:
+          name: users-service
